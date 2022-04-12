@@ -25,11 +25,14 @@ read (x);
 if (x<=1) then 
 f:= 0
 
-else if (x>1) then
+else 
 f:= (1/(x+6));
 
 writeln (f:5:2);
 
 end.
+
+
+
 
 
