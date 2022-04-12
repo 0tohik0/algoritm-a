@@ -5,21 +5,13 @@ H, P: real;
 Begin
 
 Write ('Введите сторону А');
-
-Read (A);
-
+    Read (A);
 Write ('Введите сторону B');
-
-Read (B);
-
+    Read (B);
 Write ('Введите сторону C');
-
-Read (C);
-
+    Read (C);
+    
 P:= (A + B + C)/2;
-
-H:= (2*(Sqr(P * (P - A) * (P - B) * (P - C)))) / A;
-
-Write ('Длина высоты Н =', H);
-
+H:= (2*(Sqrt(P * (P - A) * (P - B) * (P - C)))) / A;
+Write ('Длина высоты Н =', H:5:2);
 End.
