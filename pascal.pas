@@ -15,3 +15,21 @@ P:= (A + B + C)/2;
 H:= (2*(Sqrt(P * (P - A) * (P - B) * (P - C)))) / A;
 Write ('Длина высоты Н =', H:5:2);
 End.
+
+
+program p2;
+var x, f: real;
+begin
+
+read (x);
+if (x<=1) then 
+f:= 0
+
+else if (x>1) then
+f:= (1/(x+6));
+
+writeln (f:5:2);
+
+end.
+
+
