@@ -66,36 +66,23 @@ Program p5;
 
 var n,i:integer; 
     x,y,z:real;
-
 begin 
 
   write('Введите N=');
-
   readLn(n);
-
   x:=0;
-
   y:=0;
-
   z:=0;
-
   for i:=1 to n do
-
     begin
-
       y:=y+sin(i);
-
       z:=z+cos(i);
-
       x:=x+cos(i)/(y*z);
-
     end;
-
   write('x=',x:5:2);
-
   readLn;
-
 end. 
+
 
 
 
