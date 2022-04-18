@@ -69,7 +69,7 @@ var n,i:integer;
 
 begin 
 
-  write('Введите n=');
+  write('Введите N=');
 
   readLn(n);
 
