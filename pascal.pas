@@ -40,27 +40,29 @@ uses crt;
 
 var
 
-x,y:real;
+x,y, x1, y1:real;
 
 begin
 
 read(x,y);
     if x<y then
     begin
-        x:=(x+y)/2;
-        y:=2*(x*y);
+        x1:=(x+y)/2;
+        y1:=(x*y)*2;
     end
 else
     begin
-        y:=(x+y)/2;
-        x:=2*(x*y);
+        y1:=(x+y)/2;
+        x1:=(x*y)*2;
     end;
-write('x=',x:5:2,' y=',y:5:2);
+write('x=',x1:5:2,' y=',y1:5:2);
 readkey;
 end.
 
 
 /////////////////
+
+
 
 Program p5;
 
@@ -70,14 +72,14 @@ begin
 
   write('Введите N=');
   readLn(n);
-  x:=0;
+  x:=1;
   y:=0;
   z:=0;
   for i:=1 to n do
     begin
       y:=y+sin(i);
       z:=z+cos(i);
-      x:=x+cos(i)/(y*z);
+      x:=x*z/y;
     end;
   write('x=',x:5:2);
   readLn;
