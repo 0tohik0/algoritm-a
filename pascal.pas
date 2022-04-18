@@ -62,15 +62,16 @@ end.
 
 /////////////////
 
-Uses crt;
+Program p5;
 
-Var n,i:integer; x,y,z:real;
+var n,i:integer; 
+    x,y,z:real;
 
-Begin clrscr;
+begin 
 
-  Write('vvedite n=');
+  write('Введите n=');
 
-  ReadLn(n);
+  readLn(n);
 
   x:=0;
 
@@ -80,7 +81,7 @@ Begin clrscr;
 
   for i:=1 to n do
 
-    Begin
+    begin
 
       y:=y+sin(i);
 
@@ -88,14 +89,13 @@ Begin clrscr;
 
       x:=x+cos(i)/(y*z);
 
-    End;
+    end;
 
-  Write('x=',x:4:8);
+  write('x=',x:5:2);
 
-  ReadLn;
+  readLn;
 
-End. 
-
+end. 
 
 
 
