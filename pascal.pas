@@ -58,3 +58,44 @@ else
 write('x=',x:5:2,' y=',y:5:2);
 readkey;
 end.
+
+
+/////////////////
+
+Uses crt;
+
+Var n,i:integer; x,y,z:real;
+
+Begin clrscr;
+
+  Write('vvedite n=');
+
+  ReadLn(n);
+
+  x:=0;
+
+  y:=0;
+
+  z:=0;
+
+  for i:=1 to n do
+
+    Begin
+
+      y:=y+sin(i);
+
+      z:=z+cos(i);
+
+      x:=x+cos(i)/(y*z);
+
+    End;
+
+  Write('x=',x:4:8);
+
+  ReadLn;
+
+End. 
+
+
+
+
