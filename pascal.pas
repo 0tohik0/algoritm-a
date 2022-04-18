@@ -32,6 +32,46 @@ writeln (f:5:2);
 
 end.
 
+program w;
+
+uses crt;
+
+var
+
+x,y:real;
+
+begin
+
+clrscr;
+
+read(x,y);
+
+if x<y then
+
+begin
+
+x:=(x+y)/2;
+
+y:=2*x*y;
+
+end
+
+else
+
+begin
+
+y:=(x+y)/2;
+
+x:=2*x*y;
+
+end;
+
+write('x=',x,' y=',y);
+
+readkey;
+
+end.
+
 
 program p4;
 
