@@ -33,27 +33,27 @@ writeln (f:5:2);
 end.
 
 
-{  Даны действительные числа х, у (х не равно у). 
-Меньшее из этих двух чисел заменить их полусуммой, 
-а большее – их удвоенным произведением. }
+program p4;
+
 var
-  x,y,s,p: real;
+  x,y,a,b: real;
+  
 begin
   readln(x,y);
-  s:=(x+y)/2;
-  p:=2*x*y;
+  a:=(x+y)/2;
+  b:=2*x*y;
   
   if x<y then
     begin
-      x:=s;
-      y:=p;
+      x:=a;
+      y:=b;
     end
   else
     begin
-      x:=p;
-      y:=s;
+      x:=b;
+      y:=a;
     end;
-  writeln(x:6:3,' ',y:6:3);
+  writeln(x:5:2,' ',y:5:2);
 end.
 
 
