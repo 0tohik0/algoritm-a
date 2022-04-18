@@ -16,8 +16,8 @@ H:= (2*(Sqrt(P * (P - A) * (P - B) * (P - C)))) / A;
 Write ('Длина высоты Н =', H:5:2);
 End.
 
-
-program p2;
+//////////
+Program p2;
 var x, f: real;
 begin
 
@@ -32,7 +32,9 @@ writeln (f:5:2);
 
 end.
 
-program w;
+
+//////////////////
+Program p4;
 
 uses crt;
 
@@ -42,58 +44,17 @@ x,y:real;
 
 begin
 
-clrscr;
-
 read(x,y);
-
-if x<y then
-
-begin
-
-x:=(x+y)/2;
-
-y:=2*x*y;
-
-end
-
-else
-
-begin
-
-y:=(x+y)/2;
-
-x:=2*x*y;
-
-end;
-
-write('x=',x,' y=',y);
-
-readkey;
-
-end.
-
-
-program p4;
-
-var
-  x,y,a,b: real;
-  
-begin
-  readln(x,y);
-  a:=(x+y)/2;
-  b:=2*x*y;
-  
-  if x<y then
+    if x<y then
     begin
-      x:=a;
-      y:=b;
+        x:=(x+y)/2;
+        y:=2*(x*y);
     end
-  else
+else
     begin
-      x:=b;
-      y:=a;
+        y:=(x+y)/2;
+        x:=2*(x*y);
     end;
-  writeln(x:5:2,' ',y:5:2);
+write('x=',x:5:2,' y=',y:5:2);
+readkey;
 end.
-
-
