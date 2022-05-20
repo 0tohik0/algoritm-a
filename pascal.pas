@@ -87,7 +87,7 @@ end.
 
 /////////////////
 
-
+program p7;
 var
 kols : array [0..9] of byte;
 ok, m, n : integer;
@@ -117,15 +117,14 @@ begin
   i:=i*10; //i будем умножать на 10 чтобы в c не присваивалось одно и тоже число
   k:=0;
   while (not b) and (p>0) do begin
-   if p mod 10=c then inc(k);
+   if p mod 10=c then inc(k)
    if k=3 then b:=true;
    p:=p div 10;
+
   end;
  end;
  if b then writeln('в числе есть три одинаковых цифры')
   else writeln('нет');
 end.
-
-
 
 
