@@ -85,6 +85,47 @@ begin
   readLn;
 end. 
 
+/////////////////
+
+
+var
+kols : array [0..9] of byte;
+ok, m, n : integer;
+begin
+ok :=-1;
+readln(n);
+while n > 0 do
+begin
+m := n mod 10;
+inc(kols[ m ]);
+if kols[ m ]>2 then ok := m;
+n := n % 10;
+end;
+if ok < 0 then writeln('нету') else writeln(ok,' повторяется ', kols[ ok ], ' раз' );
+readln;
+end.
+var
+ i,n,p,c,k:integer;
+ b:boolean;
+begin
+ readln(n);
+ b:=false;
+ i:=1;
+ while (not b) and (i<n) do begin
+  p:=n; 
+  c:=n div i mod 10; //к c будем присваивать каждое число и проверять его  
+  i:=i*10; //i будем умножать на 10 чтобы в c не присваивалось одно и тоже число
+  k:=0;
+  while (not b) and (p>0) do begin
+   if p mod 10=c then inc(k);
+   if k=3 then b:=true;
+   p:=p div 10;
+  end;
+ end;
+ if b then writeln('в числе есть три одинаковых цифры')
+  else writeln('нет');
+end.
+
 
 
 
