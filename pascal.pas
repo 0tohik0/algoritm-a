@@ -85,6 +85,35 @@ begin
   readLn;
 end. 
 
+
+////////////
+
+задача: Вычислить значения следующих функций F(x) на отрезке |а, Ь] с шагом h, представив результат в виде таблицы, 
+первый столбец которой — значения аргумента, второй — соответствующие значения функции: F(x)=ctgx+1
+
+program p6;
+var
+    a, b, h, x, fx: Real;
+    i, n: integer;
+
+begin
+    ClrScr;
+    Write('Введите отрезок a,b и величину шага h =');
+    Read(a, b, h);
+   
+    Writeln(' x ':2, ' ', ' fx ':5);
+   
+    x := a;
+    for i := 1 to round(abs(b - a) / h) do
+    begin
+        fx := cos(x) / sin(x) + 1;
+        writeln(x:2:5, ' ', fx:5:6);
+        x := x + h;
+    end;
+   
+    Readkey;
+end.
+
 /////////////////
 
 program p7;
